@@ -3,6 +3,7 @@ package com.knoldus.electricitycharges
 case class ElectricityChargeCalculator(accountNumber: Int, accountUserName: String, userAddress: String, previousUnit: Double, currentUnit: Double) {
   private val unit: Double = currentUnit - previousUnit
 
+  //generate electricity bill using given units
   def calculateElectricityCharges(): Double = {
 
     if (unit < 0) {
